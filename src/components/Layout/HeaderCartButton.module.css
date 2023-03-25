@@ -1,10 +1,9 @@
 .button {
-    width: max-content;
     cursor: pointer;
     font: inherit;
     border: none;
     background-color: #4d1601;
-    margin-right: 20em;
+    margin-right: 10em;
     color: white;
     padding: 0.75rem 3rem;
     display: flex;
@@ -58,8 +57,4 @@
     100% {
         transform: scale(1);
     }
-}
-
-.containerr {
-    margin-left: 49em;
 }

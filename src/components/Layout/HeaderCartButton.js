@@ -5,8 +5,8 @@ import CartContext from '../Store/CartContext';
 import classes from './HeaderCartButton.module.css';
 
 const HeaderCartButton = (props) => {
+  const[btnIsHighlighted,setButtonIsHighlighted] = useState(false);
   const cartCtx = useContext(CartContext);
- const[btnIsHighlighted,setButtonIsHighlighted] = useState(false);
  const {items} = cartCtx;
   const numberOfCartItems = items.reduce((curNumber, item) => {
     return curNumber + item.amount;
@@ -20,7 +20,7 @@ const HeaderCartButton = (props) => {
     setButtonIsHighlighted(true)
    const timer =  setTimeout(() => {
       setButtonIsHighlighted(false)
-    },3000)
+    },300)
       return () => {
         clearTimeout(timer)
       }
